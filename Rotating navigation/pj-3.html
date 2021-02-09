@@ -4,171 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="style.css">
   <title>Rotating Navigation</title>
-  <style>
-    @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
-
-    :root {
-      --bg-color: #313131;
-      --bg-color2: #f4f4f4;
-      --bg-menu: #f5cba7;
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: "Lato", sans-serif;
-      background-color: var(--bg-color);
-      overflow-x: hidden;
-      color: #313131;
-    }
-
-    h1 {
-      margin-bottom: 30px;
-    }
-
-    h2 {
-      margin-bottom: 20px;
-    }
-
-    h3 {
-      margin-bottom: 15px;
-    }
-
-    p {
-      line-height: 1.5;
-      margin-bottom: 20px;
-    }
-
-    .container {
-      background-color: var(--bg-color2);
-      transform-origin: top left;
-      transition: 0.4s linear;
-      width: 100vw;
-      min-height: 100vh;
-    }
-
-    .container.show-nav {
-      transform: rotate(-18deg);
-    }
-
-    .container.show-nav .circle {
-      transform: rotate(-73deg);
-    }
-
-    .circle-container {
-      position: fixed;
-      top: -100px;
-      left: -100px;
-    }
-
-    .circle {
-      position: relative;
-      height: 200px;
-      width: 200px;
-      background-color: var(--bg-menu);
-      border-radius: 50%;
-      transition: transform 0.5s linear;
-    }
-
-    .circle button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      height: 100px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      color: #fff;
-      font-size: 26px;
-    }
-
-    .circle button:focus {
-      outline: 0;
-    }
-
-    .circle button#open {
-      left: 60%;
-    }
-    .circle button#close {
-      transform: rotate(90deg);
-      top: 60%;
-      transform-origin: top left;
-    }
-
-    .content {
-      max-width: 1000px;
-      overflow-x: hidden;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      padding: 50px 100px;
-    }
-
-    .content .image {
-      position: relative;
-      margin-bottom: 30px;
-    }
-
-    .content .image img {
-      width: 100%;
-    }
-
-    .content .image span {
-      position: absolute;
-      top: 0;
-      right: 0;
-      padding: 20px;
-      color: #fff;
-    }
-
-    .content .image a {
-      font-family: inherit;
-      color: #fff;
-      font-size: 14px;
-    }
-
-    nav {
-      position: fixed;
-      left: 0;
-      bottom: 40px;
-    }
-
-    nav ul {
-      list-style: none;
-    }
-
-    nav li {
-      color: #fff;
-      font-size: 20px;
-      padding: 7px;
-      transform: translateX(-100%);
-      transition: transform 0.4s ease-in;
-      margin-left: 10px;
-    }
-    nav ul li i {
-      margin-right: 5px;
-    }
-    nav ul li + li {
-      margin-left: 25px;
-      transform: translateX(-150%);
-    }
-    nav ul li + li + li {
-      margin-left: 35px;
-      transform: translateX(-200%);
-    }
-
-    .container.show-nav + nav li {
-      transform: translateX(0);
-      transition: transform 0.4s linear 0.3s;
-    }
-
-  </style>
+  
 </head>
 <body>
   <div class="container">
@@ -188,7 +27,7 @@
       <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sequi alias possimus aut consectetur vero?</h2>
       <h3>Author: Carley Doe</h3>
       <div class="image">
-        <img src="img/pj-3/kal-visuals.jpg" alt="">
+        <img src="img/kal-visuals.jpg" alt="">
         <span>Photo by <a href="https://unsplash.com/@kalvisuals?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">KAL VISUALS</a> on <a href="https://unsplash.com/s/photos/free?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
       </div>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque repudiandae quibusdam et veniam ullam labore pariatur sint mollitia numquam provident quos reiciendis rerum accusantium cum molestias deleniti, error dolores vero.</p>
@@ -209,14 +48,6 @@
     </ul>
   </nav>
   
-  <script>
-    const container = document.querySelector('.container')
-    const close = document.getElementById('close')
-    const open = document.getElementById('open')
-
-    open.addEventListener('click', () => container.classList.add('show-nav'))
-
-    close.addEventListener('click', () => container.classList.remove('show-nav'))
-      </script>
+  <script src="script.js"></script>
 </body>
 </html>

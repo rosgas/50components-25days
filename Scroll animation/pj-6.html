@@ -5,71 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
   <title>Scroll Animation</title>
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-
-    :root {
-      --bg-color: #f9fafb;
-      --bg-color2: rgb(90, 147, 170);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      background-color: var(--bg-color);
-      font-family: "Roboto", sans-serif;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-    }
-
-    h1 {
-      color: #313131;
-      margin: 40px 0 20px;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .box {
-      width: 400px;
-      height: 200px;
-      background-color: var(--bg-color2);
-      padding: 30px;
-      margin: 10px;
-      border-radius: 5px;
-      text-align: left;
-      opacity: 0;
-      transform: translateX(-80px);
-      transition: all 0.5s ease;
-    }
-
-    .box:nth-child(even) {
-      transform: translateX(80px);
-    }
-
-    .box.show {
-      opacity: 1;
-      transform: translateX(0);
-      transition: all 0.5s ease;
-    }
-
-    .box h2 {
-      margin-bottom: 15px;
-    }
-
-  </style>
+  
 </head>
 <body>
   <h1>Scroll to see animation</h1>
@@ -119,26 +57,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique odit ipsa, sequi ipsam earum adipisci placeat iusto eveniet perferendis distinctio.</p>
     </div>  
   </div>
-  <script>
-    const boxes = document.querySelectorAll('.box')
-
-    window.addEventListener('scroll', checkBoxes)
-
-    checkBoxes()
-
-    function checkBoxes() {
-      const triggerBottom = window.innerHeight / 5 * 4
-      
-      boxes.forEach(box => {
-        const boxTop = box.getBoundingClientRect().top
-
-        if(boxTop < triggerBottom) {
-          box.classList.add('show')
-        } else {
-          box.classList.remove('show')
-        }
-      })
-    }
-  </script>
+  
+  <script src="script.js"></script>
 </body>
 </html>
