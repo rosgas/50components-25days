@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <title>Split landing page</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Open Sans", sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .landing-pages {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .left-page,
+    .right-page {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: width 0.5s ease;
+      position: relative;
+    }
+
+    .landing-pages.hover-left .left-page {
+      width: 75%;
+    }
+
+    .landing-pages.hover-left .right-page {
+      width: 25%;
+    }
+
+    .landing-pages.hover-right .right-page {
+      width: 75%;
+    }
+
+    .landing-pages.hover-right .left-page {
+      width: 25%;
+    }
+
+    .right-page {
+      background: url(/img/pj-7/photography.jpg) no-repeat center center/cover;
+    }
+
+    .left-page {
+      background: url(/img/pj-7/videography.jpg) no-repeat center center/cover;
+    }
+
+    .left-page::before,
+    .right-page::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #a569bd;
+      opacity: 80%;
+    }
+
+    .right-page::before {
+      background-color: #313131;
+    }
+
+    .left-page span,
+    .right-page span {
+      position: absolute;
+      bottom: 40px;
+      font-size: 14px;
+      z-index: 2;
+    }
+
+    h1 {
+      color: #fff;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      z-index: 2;
+    }
+
+    a,
+    span {
+      color: #d0d3d4;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 18px;
+      z-index: 2;
+      background-color: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #45b39d;
+      border: 2px solid #45b39d;
+    }
+
+    .btn:focus,
+    .btn:active {
+      outline: none;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="landing-pages">
+    <div class="left-page">
+      <h1>Videography</h1>
+      <button class="btn">Learn more</button>
+      <span>Photo by <a href="https://unsplash.com/@christianw?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Christian Wiediger</a> on <a href="https://unsplash.com/s/photos/camera?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+    </div>
+    <div class="right-page">
+      <h1>Photography</h1>
+      <button class="btn">Learn more</button>
+      <span>Photo by <a href="https://unsplash.com/@wabulos?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">KASHILEMBO WABU</a> on <a href="https://unsplash.com/s/photos/video-camera?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+    </div>
+  </div>
+  
+  <script>
+    const leftPage = document.querySelector('.left-page')
+    const rightPage = document.querySelector('.right-page')
+    const landingPages = document.querySelector('.landing-pages')
+
+    leftPage.addEventListener('mouseenter', () => {
+      landingPages.classList.add('hover-left')
+    })
+    leftPage.addEventListener('mouseleave', () => {
+      landingPages.classList.remove('hover-left')
+    })
+
+    rightPage.addEventListener('mouseenter', () => {
+      landingPages.classList.add('hover-right')
+    })
+    rightPage.addEventListener('mouseleave', () => {
+      landingPages.classList.remove('hover-right')
+    })
+
+  </script>
+</body>
+</html>
