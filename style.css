@@ -39,6 +39,7 @@ p {
 
 /* Utility classes */
 .btn {
+  text-decoration: none;
   cursor: pointer;
   font-family: var(--main-font);
   margin-top: 10px;
