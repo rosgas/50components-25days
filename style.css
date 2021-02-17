@@ -6,8 +6,8 @@
   --btn-hover: #eb984e;
   --text-light: #ecf0f1;
   --text-dark: #313131;
-  --gh-color: rgb(121, 135, 221, 0.9);
-  --cards-color: #eb984e;
+  --primary-color: rgb(121, 135, 221, 0.9);
+  --cards-color: rgba(247, 220, 111, 0.9);
 }
 * {
   box-sizing: border-box;
@@ -123,7 +123,7 @@ header:before {
 
 .gh-link {
   align-self: flex-start;
-  color: var(--gh-color);
+  color: var(--primary-color);
   margin: 40px;
   position: absolute;
   left: 0;
@@ -136,7 +136,7 @@ header:before {
 }
 
 .gh-link:hover {
-  border: 2px solid var(--gh-color);
+  border: 2px solid var(--primary-color);
 }
 
 .arrow {
@@ -179,7 +179,7 @@ header:before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(121, 135, 221, 0.9);
+  background-color: var(--primary-color);
   border-radius: 2px;
   position: absolute;
   top: 0;
@@ -194,7 +194,7 @@ header:before {
 .card:hover .card-content {
   height: 100%;
   transition: all 0.4s ease;
-  background-color: rgba(247, 220, 111, 0.9);
+  background-color: var(--cards-color);
 }
 
 .card:hover .btn-card {
@@ -236,9 +236,9 @@ h3 {
 
 .btn-footer {
   text-decoration: none;
-  color: rgb(121, 135, 221, 0.9);
+  color: var(--primary-color);
   font-size: 18px;
-  border: 2px solid rgb(121, 135, 221, 0.9);
+  border: 2px solid var(--primary-color);
   border-radius: 5px;
   width: fit-content;
   padding: 10px 20px;
