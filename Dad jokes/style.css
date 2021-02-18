@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Ranchers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ranchers&family=Ubuntu:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+body:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(bg.jpg) no-repeat center center/cover;
+  opacity: 1;
+  z-index: -1;
+}
+
+.card {
+  width: 60%;
+  height: 60%;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: inset 0 0 13px #313131;
+  position: relative;
+  padding: 40px 50px;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Ranchers", cursive;
+  color: #313331;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+i {
+  transform: scale(1.2, 1.2);
+  margin-left: 10px;
+  color: #f4d03f;
+}
+
+.lead {
+  color: #7d3c98;
+}
+
+.joke {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  height: 40%;
+}
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  background: rgb(72, 165, 226);
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  padding: 8px 20px;
+  font-family: "Ubuntu", sans-serif;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(0.97, 0.97);
+}
+
+.btn:focus,
+.btn:active {
+  outline: none;
+}
+
+.attribute {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+    height: 75%;
+  }
+
+  .joke {
+    height: 50%;
+    font-size: 18px;
+  }
+  .attribute {
+    bottom: 15px;
+    right: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .card {
+    width: 90%;
+    height: 80%;
+  }
+
+  .joke {
+    height: 60%;
+    font-size: 18px;
+  }
+}
+@media (max-width: 350px) {
+  .card {
+    width: 90%;
+    height: 90%;
+    padding: 30px;
+  }
+
+  .joke {
+    height: 60%;
+    font-size: 18px;
+  }
+
+  .attribute {
+    font-size: 12px;
+    bottom: 10px;
+  }
+}

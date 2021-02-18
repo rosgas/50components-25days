@@ -242,6 +242,12 @@ h3 {
   border-radius: 5px;
   width: fit-content;
   padding: 10px 20px;
+  transition: 0.1s ease-in;
+}
+
+.btn-footer:hover {
+  transform: scale(0.97, 0.97);
+  opacity: 0.8;
 }
 
 .gh-footer {
